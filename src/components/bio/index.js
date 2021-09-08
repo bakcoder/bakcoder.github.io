@@ -12,32 +12,13 @@ const Bio = ({ author, language = 'ko' }) => {
   return (
     <div className="bio-wrapper">
       <div className="bio">
-        {language === 'ko' ? (
+        {(
           <div className="introduction korean">
             <p className="title">
-              안녕하세요.
               <br />
               <ReactRotatingText items={bio.description} />
               <br />
-              {bio.role} <strong>{name}</strong>입니다.
-              <br />
-            </p>
-            <div className="social-links">
-              <IconButtonBar links={social} />
-            </div>
-          </div>
-        ) : (
-          <div className="introduction english">
-            <p className="title">
-              Hello,
-              <br />
-              my name is
-              <br />
-              <strong>{name}</strong>
-              .<br />
-            </p>
-            <p className="description">
-              I'm a {bio.role} <ReactRotatingText items={bio.description} />
+              {name}의 <strong>{bio.role}</strong>
               <br />
             </p>
             <div className="social-links">
